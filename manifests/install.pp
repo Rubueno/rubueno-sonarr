@@ -77,7 +77,7 @@ class sonarr::install (
     group        => $group,
   } ->
 
-  exec { 'move files to correct folder':
+  exec { 'move sonarr files to correct folder':
     command => "/usr/bin/mv ${install_path}/NzbDrone/* ${install_path}",
     creates => "${install_path}/${executable}",
   }
